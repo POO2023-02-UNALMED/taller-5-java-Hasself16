@@ -18,4 +18,20 @@ public class Reptil extends Animal{
 		this.colorEscamas=null;
 		this.largoCola=0;
 	}
+	
+	public void setColorEscamas(String color) {
+		this.colorEscamas=color;
+	}
+	
+	public String getColorEscamas() {
+		return (this.colorEscamas);
+	}
+	
+	public void setLargoCola(int largoCola) {
+		this.largoCola=largoCola;
+	}
+	
+	public int getLargoCola() {
+		return (this.largoCola);
+	}
 }

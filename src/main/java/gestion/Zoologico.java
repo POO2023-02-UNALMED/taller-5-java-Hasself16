@@ -13,4 +13,20 @@ public class Zoologico {
 		this.nombre=null;
 		this.ubicacion=null;
 	}
+	
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	
+	public String getNombre() {
+		return (this.nombre);
+	}
+	
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion=ubicacion;
+	}
+	
+	public String getUbicacion() {
+		return (this.ubicacion);
+	}
 }

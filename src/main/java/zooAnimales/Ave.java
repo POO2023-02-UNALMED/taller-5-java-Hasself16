@@ -15,4 +15,12 @@ public class Ave extends Animal{
 		super();
 		this.colorPlumas=null;		
 	}
+	
+	public void setColorPlumas(String colorPlumas) {
+		this.colorPlumas=colorPlumas;
+	}
+	
+	public String getColorPlumas() {
+		return (this.colorPlumas);
+	}
 }

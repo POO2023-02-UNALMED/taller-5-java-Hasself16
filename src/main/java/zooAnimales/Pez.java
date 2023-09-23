@@ -18,4 +18,20 @@ public class Pez extends Animal{
 		this.colorEscamas=null;
 		this.cantidadAletas=0;
 	}
+	
+	public void setColorEscamas(String colorEscamas) {
+		this.colorEscamas=colorEscamas;
+	}
+	
+	public String getColorEscamas() {
+		return (this.colorEscamas);
+	}
+	
+	public void setCantidadAletas(int cantidadAletas) {
+		this.cantidadAletas=cantidadAletas;
+	}
+	
+	public int getCantidadAletas() {
+		return (this.cantidadAletas);
+	}
 }

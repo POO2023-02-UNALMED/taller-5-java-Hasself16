@@ -25,4 +25,36 @@ public class Animal {
 		this.habitat=null;
 		this.genero=null;
 	}
+	
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	
+	public String getNombre() {
+		return (this.nombre);
+	}
+	
+	public void setEdad(int edad) {
+		this.edad=edad;
+	}
+	
+	public int getEdad() {
+		return (this.edad);
+	}
+	
+	public void setHabitat(String habitat) {
+		this.habitat=habitat;
+	}
+	
+	public String getHabitat() {
+		return (this.habitat);
+	}
+	
+	public void setGenero(String genero) {
+		this.genero=genero;
+	}
+	
+	public String getGenero() {
+		return (this.genero);
+	}
 }
