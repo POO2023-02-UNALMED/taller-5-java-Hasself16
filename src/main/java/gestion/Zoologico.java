@@ -15,5 +15,4 @@ public class Zoologico {
 		this.nombre=null;
 		this.ubicacion=null;
 	}
-	
 }
