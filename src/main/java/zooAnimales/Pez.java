@@ -44,8 +44,8 @@ public class Pez extends Animal{
 		return (Pez.listado.size());
 	}
 	@Override
-	public void movimiento() {
-		System.out.println("nadar");
+	public String movimiento() {
+		return ("nadar");
 	}
 	public static Animal crearSalmon(String nombre, int edad, String genero) {
 		Pez.salmones++;

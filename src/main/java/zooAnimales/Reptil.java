@@ -44,8 +44,8 @@ public class Reptil extends Animal{
 		return (Reptil.listado.size());
 	}
 	@Override
-	public void movimiento() {
-		System.out.println("reptar");
+	public String movimiento() {
+		return ("reptar");
 	}
 	public static Animal crearIguana(String nombre, int edad, String genero) {
 		Reptil.iguanas++;
