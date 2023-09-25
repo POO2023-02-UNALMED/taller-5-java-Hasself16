@@ -8,7 +8,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona [] zona; 
+	private Zona [] zona = null; 
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		totalAnimales ++;

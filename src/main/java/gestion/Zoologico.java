@@ -3,7 +3,7 @@ package gestion;
 public class Zoologico {
 	private String nombre;
 	private String ubicacion;
-	private int [] zonas;
+	private int [] zonas=null;
 	
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre=nombre;
