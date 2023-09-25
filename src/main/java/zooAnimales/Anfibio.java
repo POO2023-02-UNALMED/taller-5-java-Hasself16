@@ -44,8 +44,8 @@ public class Anfibio extends Animal{
 		return (Anfibio.listado.size());
 	}
 	@Override
-	public String movimiento() {
-		return ("saltar");
+	public void movimiento() {
+		System.out.println("saltar");
 	}
 	public static Animal crearRana(String nombre, int edad, String genero) {
 		Anfibio.ranas++;

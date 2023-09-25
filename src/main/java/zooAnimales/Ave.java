@@ -33,8 +33,8 @@ public class Ave extends Animal{
 		return (Ave.listado.size());
 	}
 	@Override
-	public String movimiento() {
-		return ("volar");
+	public void movimiento() {
+		System.out.println("volar");
 	}
 	
 	public static Animal crearHalcon(String nombre, int edad, String genero) {

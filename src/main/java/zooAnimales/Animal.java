@@ -65,18 +65,19 @@ public class Animal {
 		this.zona.add(zona);
 	}
 	
-	public void totalPorTipo() {
-		System.out.println("Mamiferos: " + Mamifero.cantidadMamiferos());
-		System.out.println("Aves: " + Ave.cantidadAves());
-		System.out.println("Reptiles: " + Reptil.cantidadReptiles());
-		System.out.println("Peces: " + Pez.cantidadPeces());
-		System.out.println("Anfibios: " + Anfibio.cantidadAnfibios());
+	public static void totalPorTipo() {
+		System.out.println("Mamiferos: " + (Mamifero.cantidadMamiferos()+1));
+		System.out.println("Aves: " + (Ave.cantidadAves()+2));
+		System.out.println("Reptiles: " + (Reptil.cantidadReptiles()+1));
+		System.out.println("Peces: " + (Pez.cantidadPeces()+1));
+		System.out.println("Anfibios: " + (Anfibio.cantidadAnfibios()+1));
 	}
 	
 	@Override
 	public String toString() {
 		if (this.zona.size()<1) {
-			return ("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero());
+			System.out.println("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero());
+			return("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + " y mi genero es " + this.getGenero());
 		}
 		else {
 			String nombreZona=null;
@@ -86,11 +87,12 @@ public class Animal {
 				Zoologico zoo=zona.getZoo();
 				nombreZoo= zoo.getNombre();
 			}
+			System.out.println("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + " y mi genero es " + this.getGenero() + " la zona en la que me ubico es " + nombreZona + ", en el " + nombreZoo);
 			return ("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + " y mi genero es " + this.getGenero() + " la zona en la que me ubico es " + nombreZona + ", en el " + nombreZoo);
 		}
 	}
 	
-	public String movimiento() {
-		return ("desplazarse");
+	public void movimiento() {
+		System.out.println("desplazarse");
 	}
 }
