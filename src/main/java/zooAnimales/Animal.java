@@ -2,6 +2,7 @@ package zooAnimales;
 
 import gestion.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Animal {
@@ -10,7 +11,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private List<Zona> zona; 
+	private List<Zona> zona = new ArrayList<>(); 
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		totalAnimales ++;
