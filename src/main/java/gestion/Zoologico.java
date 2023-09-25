@@ -47,4 +47,7 @@ public class Zoologico {
 		}
 		return (Total);
 	}
+	public List<Zona> getZona() {
+		return zonas;
+	}
 }

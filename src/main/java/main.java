@@ -28,6 +28,17 @@ public class main {
 		Reptil.crearIguana("test", 11, "M");
 		Pez.crearBacalao("test", 11, "M");
 		System.out.println(zoo.cantidadTotalAnimales());
+		System.out.println(zoo.getZona().get(0).cantidadAnimales());
+		System.out.println(Mamifero.caballos);
+		System.out.println(Mamifero.leones);
+		System.out.println(Ave.aguilas);
+		System.out.println(Ave.halcones);
+		System.out.println(Anfibio.ranas);
+		System.out.println(Anfibio.salamandras);
+		System.out.println(Reptil.iguanas);
+		System.out.println(Reptil.serpientes);
+		System.out.println(Pez.salmones);
+		System.out.println(Pez.bacalaos);
 	}
 
 }
