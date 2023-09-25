@@ -1,7 +1,9 @@
 package zooAnimales;
 
+import java.util.List;
+
 public class Pez extends Animal{
-	private Pez [] listado;
+	private static List<Pez> listado;
 	public int salmones;
 	public int bacalaos;
 	private String colorEscamas;
@@ -11,12 +13,14 @@ public class Pez extends Animal{
 		super(nombre, edad, habitat, genero);
 		this.colorEscamas=color;
 		this.cantidadAletas=aletas;
+		Pez.listado.add(this);
 	}
 	
 	public Pez() {
 		super();
 		this.colorEscamas=null;
 		this.cantidadAletas=0;
+		Pez.listado.add(this);
 	}
 	
 	public void setColorEscamas(String colorEscamas) {
@@ -33,5 +37,21 @@ public class Pez extends Animal{
 	
 	public int getCantidadAletas() {
 		return (this.cantidadAletas);
+	}
+	
+	public static int cantidadPeces() {
+		return (Pez.listado.size());
+	}
+	@Override
+	public String movimiento() {
+		return ("nadar");
+	}
+	public void crearSalmon(String nombre, int edad, String genero) {
+		this.salmones++;
+		new Pez(nombre, edad, "oceano", genero, "rojo", 6);
+	}
+	public void crearBacalao(String nombre, int edad, String genero) {
+		this.bacalaos++;
+		new Pez(nombre, edad, "oceano", genero, "gris", 6);
 	}
 }

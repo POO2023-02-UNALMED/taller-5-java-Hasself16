@@ -1,6 +1,8 @@
 package zooAnimales;
 
-import gestion.Zona;
+import gestion.*;
+
+import java.util.List;
 
 public class Animal {
 	private static int totalAnimales;
@@ -8,7 +10,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona [] zona = null; 
+	private List<Zona> zona; 
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		totalAnimales ++;
@@ -56,5 +58,38 @@ public class Animal {
 	
 	public String getGenero() {
 		return (this.genero);
+	}
+	
+	public void agregarZona(Zona zona) {
+		this.zona.add(zona);
+	}
+	
+	public void totalPorTipo() {
+		System.out.println("Mamiferos: " + Mamifero.cantidadMamiferos());
+		System.out.println("Aves: " + Ave.cantidadAves());
+		System.out.println("Reptiles: " + Reptil.cantidadReptiles());
+		System.out.println("Peces: " + Pez.cantidadPeces());
+		System.out.println("Anfibios: " + Anfibio.cantidadAnfibios());
+	}
+	
+	@Override
+	public String toString() {
+		if (this.zona.size()<1) {
+			return ("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero());
+		}
+		else {
+			String nombreZona=null;
+			String nombreZoo=null;
+			for(Zona zona:this.zona) {
+				nombreZona=zona.getNombre();
+				Zoologico zoo=zona.getZoo();
+				nombreZoo= zoo.getNombre();
+			}
+			return ("Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + " y mi genero es " + this.getGenero() + " la zona en la que me ubico es " + nombreZona + ", en el " + nombreZoo);
+		}
+	}
+	
+	public String movimiento() {
+		return ("desplazarse");
 	}
 }
